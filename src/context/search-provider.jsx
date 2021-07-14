@@ -5,6 +5,8 @@ const urqlClient = createClient({
   url: `https://${process.env.GATSBY_SHOPIFY_STORE_URL}/api/2021-01/graphql.json`,
   fetchOptions: {
     headers: {
+      "Access-Control-Allow-Origin" : "*",
+      "Access-Control-Allow-Credentials" : true,
       "X-Shopify-Storefront-Access-Token":
         process.env.GATSBY_STOREFRONT_ACCESS_TOKEN,
     },
